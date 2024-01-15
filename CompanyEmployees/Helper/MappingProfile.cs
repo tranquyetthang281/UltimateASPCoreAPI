@@ -15,6 +15,7 @@ namespace CompanyEmployees.Helper
 
             CreateMap<CompanyForCreationDto, Company>();
 
+            CreateMap<EmployeeForCreationDto, Employee>();
         }
     }
 }
