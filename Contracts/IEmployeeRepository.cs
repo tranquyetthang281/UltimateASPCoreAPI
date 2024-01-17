@@ -10,5 +10,6 @@ namespace Contracts
 
         void CreateEmployeeForCompany(Guid companyId, Employee employee);
 
+        void DeleteEmployee(Employee employee);
     }
 }
