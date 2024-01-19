@@ -6,16 +6,13 @@
         public string? Name { get; init; }
         public string? FullAddress { get; init; }
     }
+    public record CompanyForCreationDto : CompanyForManipulationDto;
+    
+    public record CompanyForUpdateDto : CompanyForManipulationDto;
 
     public record EmployeeDto(Guid Id, string Name, int Age, string Position);
 
-    public record CompanyForCreationDto(string Name, string Address, string Country,
-                                            IEnumerable<EmployeeForCreationDto> Employees);
+    public record EmployeeForCreationDto : EmployeeForManipulationDto;
 
-    public record EmployeeForCreationDto(string Name, int Age, string Position);
-
-    public record EmployeeForUpdateDto(string Name, int Age, string Position);
-
-    public record CompanyForUpdateDto(string Name, string Address, string Country, 
-                                            IEnumerable<EmployeeForCreationDto> Employees);
+    public record EmployeeForUpdateDto : EmployeeForManipulationDto;
 }
