@@ -3,7 +3,7 @@ using Microsoft.Net.Http.Headers;
 using Shared.DataTransferObjects;
 using System.Text;
 
-namespace CompanyEmployees.Helper
+namespace CompanyEmployees.Utility
 {
     public class CsvOutputFormatter : TextOutputFormatter
     {

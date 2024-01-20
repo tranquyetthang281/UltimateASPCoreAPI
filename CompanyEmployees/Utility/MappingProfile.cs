@@ -2,7 +2,7 @@
 using Entities.Models;
 using Shared.DataTransferObjects;
 
-namespace CompanyEmployees.Helper
+namespace CompanyEmployees.Utility
 {
     public class MappingProfile : Profile
     {

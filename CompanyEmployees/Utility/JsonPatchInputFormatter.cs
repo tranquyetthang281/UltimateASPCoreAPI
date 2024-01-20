@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 
-namespace CompanyEmployees.Helper
+namespace CompanyEmployees.Utility
 {
-    public static class ProgramHelper
+    public static class JsonPatchInputFormatter
     {
         public static NewtonsoftJsonPatchInputFormatter GetJsonPatchInputFormatter() 
             => new ServiceCollection()
