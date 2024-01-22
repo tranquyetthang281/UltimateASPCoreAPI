@@ -22,21 +22,21 @@ namespace CompanyEmployees.Utility
             }
             return false;
         }
-        public override async Task WriteResponseBodyAsync(OutputFormatterWriteContext
-       context, Encoding selectedEncoding)
+        public override async Task WriteResponseBodyAsync(OutputFormatterWriteContext context, 
+            Encoding selectedEncoding)
         {
             var response = context.HttpContext.Response;
             var buffer = new StringBuilder();
-            if (context.Object is IEnumerable<CompanyDto>)
+            if (context.Object is IEnumerable<CompanyDto> companies)
             {
-                foreach (var company in (IEnumerable<CompanyDto>)context.Object)
+                foreach (var company in companies)
                 {
                     FormatCsv(buffer, company);
                 }
             }
-            else
+            else if (context.Object is CompanyDto company)
             {
-                FormatCsv(buffer, (CompanyDto)context.Object);
+                FormatCsv(buffer, company);
             }
 
             await response.WriteAsync(buffer.ToString());
